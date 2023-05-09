@@ -6,7 +6,7 @@ pygame.display.set_caption("Runner")
 sky_surface = pygame.image.load("graphics/Sky.png").convert_alpha()
 ground_surface = pygame.image.load("graphics/ground.png").convert_alpha()
 snail_surface = pygame.image.load("graphics/snail/snail1.png").convert_alpha()
-player_surface = pygame.image.load("graphics/player
+player_surface = pygame.image.load("graphics/Player/player_walk_1.png").convert_alpha()
 text = pygame.font.Font("font/Pixeltype.ttf", 50)
 
 
