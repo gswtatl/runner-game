@@ -11,7 +11,9 @@ ground_surf = pygame.image.load("graphics/ground.png").convert_alpha()
 snail_surf = pygame.image.load("graphics/snail/snail1.png").convert_alpha()
 snail_rect = snail_surf.get_rect(midbottom=(700, 300))
 
-text = pygame.font.Font("font/Pixeltype.ttf", 50)
+score = pygame.font.Font("font/Pixeltype.ttf", 50)
+score_surf = score.render("Runner", False, (64, 64, 64))
+score_rect = score_surf.get_rect(center=(400, 50))
 
 player_surf = pygame.image.load("graphics/Player/player_walk_1.png").convert_alpha()
 player_rect = player_surf.get_rect(midbottom=(80, 300))
@@ -30,7 +32,9 @@ while True:
 
     win.blit(sky_surf, (0, 0))
     win.blit(ground_surf, (0, 300))
-    win.blit(text.render("Runner", False, (0, 0, 0)), (345, 70))
+    pygame.draw.rect(win, "#c0e8ec", score_rect)
+    pygame.draw.rect(win, "#c0e8ec", score_rect, 10)
+    win.blit(score_surf, score_rect)
 
     snail_rect.x -= 4
     if snail_rect.right <= 0:
