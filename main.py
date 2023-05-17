@@ -96,8 +96,10 @@ def collision_sprite():
 
 
 pygame.init()
+pygame.display.set_caption("Pixel Runner")
+icon = pygame.image.load('icon.ico')
+pygame.display.set_icon(icon)
 win = pygame.display.set_mode((800, 400))
-pygame.display.set_caption("Runner")
 game_active = False
 clock = pygame.time.Clock()
 start_time = 0
